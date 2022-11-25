@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul li {
+    text-indent: 0;
+    list-style-type: 0;
+    list-style: none;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+:root {
+    /* COLOR PALETTE */
+    --primary: #FFFFFF;
+    --secundary: #000000;
+    --higlight: #5E0708;
+    --higlight2: #FF0000;
+    --background: radial-gradient(188.4% 330.9% at 50% 50%, #27080A 21.88%, #FF0000 94.27%);
+}
+
+body{
+    background: var(--background);
+    width: 100vw;
+    height: 100vh;
+}
