@@ -1,0 +1,23 @@
+/*STANDARD BUTTON*/
+
+.wrapper-button {
+    border-left-width: 0px;
+    border-top-width: 0px;
+    border: 1px solid white;
+    padding: 0 1px 1px 0;
+    width: 10.5rem;
+    height: 3.7rem;
+    font-size: 1rem;
+}
+
+.button {
+    background-color: transparent;
+    border:1px solid white;
+    color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 10.3rem;
+    height: 3.5rem;
+    
+}
