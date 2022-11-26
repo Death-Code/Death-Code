@@ -34,8 +34,8 @@ input[type="reset"] {
     /* COLOR PALETTE */
     --primary: #FFFFFF;
     --secundary: #000000;
-    --higlight: #5E0708;
-    --higlight2: #FF0000;
+    --highlight: #5E0708;
+    --highlight2: #FF0000;
     --background: radial-gradient(188.4% 330.9% at 50% 50%, #27080A 21.88%, #FF0000 94.27%);
 }
 
