@@ -1,7 +1,7 @@
 * { 
     font-family: 'share tech mono';
 }
-
+/* MAIN DEATH PAGE */
 main {
     display: grid;
     grid-template-columns: 1fr;
@@ -14,13 +14,13 @@ main {
     height: 100vh;
 
 }
-
+/* TERMINAL */
 section:nth-of-type(1){
     grid-area: caja1;
     background-color: black;
 
 }
-
+/* DEATH VIDEO */
 section:nth-of-type(2){
     grid-area: caja2;
     background-color: var(--highlight) ;
@@ -29,7 +29,7 @@ section:nth-of-type(2){
     background-repeat: no-repeat;
     background-position: center;
 }
-
+/* TERMINAL+DEATH SECTION */
 section:nth-of-type(1), section:nth-of-type(2){
     border: 2px solid white;
     color: white;
@@ -39,7 +39,7 @@ section:nth-of-type(1), section:nth-of-type(2){
     width: 90%;
     height: 35vh;
 }
-
+/* TERMINAL TEXT */
 p {
     padding: 0.2em;
 }
@@ -47,11 +47,13 @@ p span {
     color: #FF0000;
 }
 
-
+/* BUTTON */
 section:nth-of-type(3) {
     grid-area: button;
     margin: 0 auto;
 }
+
+/* TEXT ANIMATION */
 @keyframes fadein {
     from {
       opacity: 0;
@@ -67,7 +69,7 @@ section:nth-of-type(3) {
     animation-fill-mode: forwards;
   }
 
-
+/* TEXT DEATH DISPLAY  */
 .death2{
     display: none;
 }
@@ -80,6 +82,7 @@ section:nth-of-type(3) {
     display: none;
 }
 
+/* RESPONSIVE */
 @media (min-width: 700px) and (orientation: landscape) {
     main {
     display: grid;
