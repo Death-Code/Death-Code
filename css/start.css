@@ -29,7 +29,7 @@ h1 {
 }
 
 article{
-    background: var(--secundary);
+    background: var(--secondary);
     border: 2px solid var(--primary);
     border-radius: .5rem .5rem 0 0;
     width: 100%;
