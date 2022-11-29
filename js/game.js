@@ -22,4 +22,3 @@ terminal4.addEventListener('click', () => {
     let randomDeath = Math.floor(Math.random() * 4) + 1
     localStorage.setItem('death', randomDeath)
 })
-Footer

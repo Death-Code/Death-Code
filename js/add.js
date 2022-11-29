@@ -19,6 +19,7 @@ add.addEventListener('click', () => {
     let playerName = input.value
     let newPlayer = document.createElement('p')
     newPlayer.innerHTML = '< ' + playerName + ' >'
+    document.getElementById('removePlayer' + addClicked).appendChild(newPlayer)
 
     //ADD PLAYER NAME TO LOCAL STORAGE
     localStorage.setItem('name' + addClicked, playerName)
@@ -31,13 +32,14 @@ add.addEventListener('click', () => {
     remove.className = 'remove-button'
     remove.addEventListener('click', () => {
         newArticle.remove()
+        localStorage.getItem('name' + addClicked)
+        sessionStorage.getItem('name' + addClicked)
     })
-
-    //APPEND CHILD
-    document.getElementById('removePlayer' + addClicked).appendChild(newPlayer)
     document.getElementById('removePlayer' + addClicked).appendChild(remove)
 
     //RESET VALUE ON INPUT
     input.value = ''
+
+    //ADD COUNT
     addClicked++
 })
