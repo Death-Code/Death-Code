@@ -13,6 +13,7 @@ add.addEventListener('click', () => {
     let playerName = input.value
     let newPlayer = document.createElement('p')
     newPlayer.innerHTML = '< ' + playerName + ' >'
+    localStorage.setItem('name' + addClicked, playerName)
 
     //ADD REMOVE BUTTON INTO THE ARTICLE
     let remove = document.createElement('button')
