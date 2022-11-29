@@ -19,7 +19,6 @@ add.addEventListener('click', () => {
     let playerName = input.value
     let newPlayer = document.createElement('p')
     newPlayer.innerHTML = '< ' + playerName + ' >'
-    document.getElementById('removePlayer' + addClicked).appendChild(newPlayer)
 
     //ADD PLAYER NAME TO LOCAL STORAGE
     localStorage.setItem('name' + addClicked, playerName)
@@ -35,6 +34,9 @@ add.addEventListener('click', () => {
         localStorage.getItem('name' + addClicked)
         sessionStorage.getItem('name' + addClicked)
     })
+
+    //APPEND
+    document.getElementById('removePlayer' + addClicked).appendChild(newPlayer)
     document.getElementById('removePlayer' + addClicked).appendChild(remove)
 
     //RESET VALUE ON INPUT

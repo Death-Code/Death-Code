@@ -27,3 +27,14 @@ document.querySelector('#flash').appendChild(flash)
 //REMOVE PLAYER FROM STORAGE
 localStorage.removeItem('name' + randomPlayerName())
 sessionStorage.removeItem('name' + randomPlayerName())
+
+//FINAL SCREEN
+const kill = document.querySelector('#kill')
+
+kill.addEventListener('click', () => {
+    if (localStorage.length < 2) {
+        kill.href = 'final.html'
+    } else {
+        kill.href = 'game.html'
+    }
+})
