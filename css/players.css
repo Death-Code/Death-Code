@@ -13,7 +13,7 @@ h1{
     color: var(--primary);
     font-size: 2rem;
 }
-
+/* TERMINAL BOX */
 section{
     width: 90%;
     height: 50vh;
@@ -21,7 +21,7 @@ section{
     border-radius: .5rem .5rem 0 0;
     border: 1px solid var(--primary);
 }
-
+/* ADD PLAYERS */
 form{
     width: 90%;
     max-width: 30rem;
@@ -31,6 +31,7 @@ form{
     gap: 1rem;
 }
 
+/* TERMINAL CONTENT  */
 form input, form button{
     background-color: var(--secondary);
     color: var(--primary);
