@@ -6,6 +6,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Share Tech Mono';
 }
 
 a {
@@ -33,7 +34,7 @@ input[type="reset"] {
 :root {
     /* COLOR PALETTE */
     --primary: #FFFFFF;
-    --secundary: #000000;
+    --secondary: #000000;
     --highlight: #5E0708;
     --highlight2: #FF0000;
     --background: radial-gradient(188.4% 330.9% at 50% 50%, #27080A 21.88%, #FF0000 94.27%);

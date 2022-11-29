@@ -1,0 +1,69 @@
+main{
+    width: 90%;
+    max-width: 50rem;
+    display: flex;
+    flex-flow: column nowrap;
+    padding-top: 5rem;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+h1{
+    color: var(--primary);
+    font-size: 2rem;
+}
+
+section{
+    width: 90%;
+    height: 50vh;
+    background-color: var(--secondary);
+    border-radius: .5rem .5rem 0 0;
+    border: 1px solid var(--primary);
+}
+
+form{
+    width: 90%;
+    max-width: 30rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+form input, form button{
+    background-color: var(--secondary);
+    color: var(--primary);
+    height: 2rem;
+    font-size: 1.5rem;
+    border: 1px solid var(--primary);   
+}
+
+form input {
+    width: 100%;
+}
+
+form button{
+    width: 2rem;
+}
+
+.terminal{
+    color:var(--primary);
+    padding: 2rem;
+}
+
+.remove-button{
+    color: var(--highlight2);
+
+}
+
+.article-player{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: .5rem;
+    font-size: 1rem;
+}
+
