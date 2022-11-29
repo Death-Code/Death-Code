@@ -1,3 +1,9 @@
+//CLEAR LOCAL STORAGE
+window.addEventListener('load', () => {
+    localStorage.clear()
+    sessionStorage.clear()
+})
+
 let addClicked = 1
 const input = document.getElementById('input')
 const add = document.getElementById('add')
@@ -13,6 +19,9 @@ add.addEventListener('click', () => {
     let playerName = input.value
     let newPlayer = document.createElement('p')
     newPlayer.innerHTML = '< ' + playerName + ' >'
+
+    //ADD PLAYER NAME TO LOCAL STORAGE
+    localStorage.setItem('name' + addClicked, playerName)
 
     //ADD REMOVE BUTTON INTO THE ARTICLE
     let remove = document.createElement('button')

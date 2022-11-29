@@ -8,30 +8,35 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/start.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>DEATH CODE</title>
 </head>
 
 <body>
 
     <main>
-        <section class="container">
+        <section id="logo">
             <!-- LOGO -->
         </section>
 
-        <section>
-            <h1>Instrucciones</h1>
+        <section id="inst" class="inactive">
+            <h1>INSTRUCTIONS</h1>
 
             <article>
-                <p>-Los coders que sean anotados en esta terminal morirán</p>
-                <p>-No podrás determinar la causa de muerte o el orden de las mismas</p>
-                <p>-Quien escriba en esta terminal podrá ver y escuchar al Shinigami que era su propiedad</p>
+                <p>-Coders that are noted in this terminal will die</p>
+                <p>-You will not be able to determine the cause of death or the order thereof</p>
+                <p>-Whoever writes in this terminal will be able to see and hear the Shinigami that was its original
+                    owner</p>
             </article>
 
             <div class="wrapper-button">
                 <button id="buton" class="button"><a href="players.html">START</a></button>
             </div>
+            <div id="sonidos"><audio src="/audio/Toshi Ichiyanagi - Music for Coup d'Etat (1973).mp3" autoplay></audio>
+            </div>
         </section>
     </main>
+    <script src="js/start.js"></script>
 </body>
 
 </html>

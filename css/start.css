@@ -3,7 +3,7 @@
 }
 
 body{
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 main {
@@ -21,6 +21,7 @@ section:nth-of-type(2){
 	justify-content: space-evenly;
 	align-items: flex-start;
 	gap: 1.5rem;
+	animation-duration: 3s;
 } 
 
 h1 {
@@ -29,7 +30,7 @@ h1 {
 }
 
 article{
-    background: var(--secundary);
+    background: var(--secondary);
     border: 2px solid var(--primary);
     border-radius: .5rem .5rem 0 0;
     width: 100%;
@@ -96,14 +97,28 @@ section:nth-of-type(1) {
 	background-repeat: no-repeat;
 	background-position: center;
 	margin: 0 auto;
-	animation: start 4s;
-}
-
-section:nth-of-type(2){
-	animation: appear;
+	animation: start 12s forwards;
+	transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 @keyframes start {
-	0%{opacity: 0;}
-	100%{opacity: 1;}
+	0%{
+		opacity: 0;
+		transform: rotate(-15deg);
+		filter: blur(1rem);
+	}
+	85%{
+		opacity: 1;
+		transform: rotate(0);
+		filter: blur(0);
+	}
+	100%{
+		opacity: 0;
+		transform: rotate(30deg);
+		filter: blur(1rem);
+	}
+}
+
+.inactive{
+	display: none;
 }
