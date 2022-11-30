@@ -7,6 +7,7 @@ main{
     align-items: center;
     gap: 2rem;
     margin: 0 auto;
+    animation: entrance 2s;
 }
 
 h1{
@@ -67,3 +68,15 @@ form button{
     font-size: 1rem;
 }
 
+/* ANIMATIONS */
+
+@keyframes entrance {
+    from {
+        opacity: 0;
+        filter: blur(1rem);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}

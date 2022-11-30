@@ -1,3 +1,21 @@
+//ANIMATIONS
+
+const element = document.querySelector(".terminal-button1");
+        element.classList.add('animate__animated', 'animate__fadeInLeft', "animate__slow");
+        
+       
+        const element1 = document.querySelector(".terminal-button2");
+        element1.classList.add('animate__animated', 'animate__fadeInDown', "animate__slower");
+        
+
+        const element2 = document.querySelector(".terminal-button3");
+        element2.classList.add('animate__animated', 'animate__fadeInUp', "animate__slower");
+        
+
+        const element3 = document.querySelector(".terminal-button4");
+        element3.classList.add('animate__animated', 'animate__fadeInRight', "animate__slow");
+
+
 //TERMINALS CONST
 const terminal1 = document.getElementById('terminal1')
 const terminal2 = document.getElementById('terminal2')
