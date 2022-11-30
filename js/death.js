@@ -11,7 +11,7 @@ function animation() {
 //GAME
 
 //ASSIGN RANDOM NUMBER TO A RANDOM PLAYER KEY NAME
-let playerNumber = Math.floor(Math.random() * localStorage.length) + 1
+let playerNumber = Math.floor(Math.random() * (localStorage.length - 1)) + 1
 let playerName = () => {
     let players = []
     for (let i = 0; i < localStorage.length; i++) {
@@ -19,8 +19,11 @@ let playerName = () => {
         players.push(localStorage.getItem(localStorage.key(i)));
     }
     console.log(players, players.length)
-    localStorage.removeItem('name' + playerNumber)
-    return players[playerNumber]
+    if (localStorage.length === 1) {
+        return players[0]
+    } else {
+        return players[playerNumber]
+    }
 }
 
 
@@ -35,26 +38,21 @@ document.querySelector('#flash').appendChild(flash)
 const death = sessionStorage.getItem('death')
 
 
+//REMOVE PLAYER FROM STORAGE AND RESET DEATH
+function cleanStorage() {
+    localStorage.removeItem(localStorage.key(playerNumber))
+}
 
 //CONDITION TO CONTINUE PLAYING OR END GAME
 const killButton = document.querySelector('#kill')
 
 killButton.addEventListener('click', () => {
     if (localStorage.length === 1) {
-        //cleanStorage()
-        kill.href = 'final.html'
+        cleanStorage()
+        killButton.href = 'final.html'
     } else {
-        //cleanStorage()
-        kill.href = 'game.html'
+        cleanStorage()
+        killButton.href = 'game.html'
     }
 })
-
-
-//REMOVE PLAYER FROM STORAGE AND RESET DEATH
-// function cleanStorage() {
-//     localStorage.removeItem('name' + playerNumber)
-//     sessionStorage.removeItem('name' + playerNumber)
-// }
-
-
 
