@@ -44,7 +44,13 @@ p {
     padding: 0.2em;
 }
 p span {
-    color: #FF0000;
+    color: var(--highlight2);
+}
+.retard {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
 }
 
 /* BUTTON */
