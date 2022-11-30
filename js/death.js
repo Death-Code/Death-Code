@@ -6,35 +6,55 @@ function animation() {
     element.classList.add('animate__animated', 'animate__flash', 'animate__repeat-3')
 }
 
+
+
 //GAME
-//RANDOM PLAYER TO KILL
-let randomPlayerName = () => {
-    let randomPlayer = Math.floor(Math.random() * localStorage.length) + 1
-    if (randomPlayer === localStorage.length) {
-        return localStorage.length - 1
+
+//ASSIGN RANDOM NUMBER TO A RANDOM PLAYER KEY NAME
+let playerNumber = Math.floor(Math.random() * localStorage.length) + 1
+let playerName = () => {
+    let players = []
+    for (let i = 0; i < localStorage.length; i++) {
+        console.log(localStorage.key(i))
+        players.push(localStorage.getItem(localStorage.key(i)));
     }
-    return randomPlayer
+    console.log(players, players.length)
+    localStorage.removeItem('name' + playerNumber)
+    return players[playerNumber]
 }
-console.log(randomPlayerName())
-let playerKilled = localStorage.getItem('name' + randomPlayerName())
-console.log(playerKilled)
+
+
 
 //ADD PLAYER NO THE DEATH SCREEN
 let flash = document.createElement('p')
-flash.innerHTML = '-' + playerKilled
+flash.innerHTML = '-' + playerName()
 document.querySelector('#flash').appendChild(flash)
 
-//REMOVE PLAYER FROM STORAGE
-localStorage.removeItem('name' + randomPlayerName())
-sessionStorage.removeItem('name' + randomPlayerName())
 
-//FINAL SCREEN
-const kill = document.querySelector('#kill')
+//ASSIGN DEATH CHOOSEN
+const death = sessionStorage.getItem('death')
 
-kill.addEventListener('click', () => {
-    if (localStorage.length < 2) {
+
+
+//CONDITION TO CONTINUE PLAYING OR END GAME
+const killButton = document.querySelector('#kill')
+
+killButton.addEventListener('click', () => {
+    if (localStorage.length === 1) {
+        //cleanStorage()
         kill.href = 'final.html'
     } else {
+        //cleanStorage()
         kill.href = 'game.html'
     }
 })
+
+
+//REMOVE PLAYER FROM STORAGE AND RESET DEATH
+// function cleanStorage() {
+//     localStorage.removeItem('name' + playerNumber)
+//     sessionStorage.removeItem('name' + playerNumber)
+// }
+
+
+

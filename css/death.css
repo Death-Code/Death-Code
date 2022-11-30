@@ -15,10 +15,9 @@ main {
 
 }
 /* TERMINAL */
-section:nth-of-type(1){
+.terminal{
     grid-area: caja1;
     background-color: black;
-
 }
 /* DEATH VIDEO */
 section:nth-of-type(2){
@@ -39,6 +38,7 @@ section:nth-of-type(1), section:nth-of-type(2){
     width: 90%;
     height: 35vh;
 }
+
 /* TERMINAL TEXT */
 p {
     padding: 0.2em;
@@ -70,16 +70,11 @@ section:nth-of-type(3) {
   }
 
 /* TEXT DEATH DISPLAY  */
-.death2{
+.death{
     display: none;
 }
-
-.death3{
-    display: none;
-}
-
-.death4{
-    display: none;
+.active-death{
+    display: block;
 }
 
 /* RESPONSIVE */

@@ -1,0 +1,104 @@
+* {
+    font-family: 'share tech mono';
+}
+
+body{
+	overflow: hidden;
+}
+
+main {
+	width: 90%;
+	max-width: 50rem;
+	height: 100%;
+	margin: 0 auto;
+}
+
+section{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	gap: 1.5rem;
+    animation: entrance;
+	animation-duration: 2s;
+} 
+
+h1 {
+	color: var(--primary);
+	font-size: 2rem;
+}
+
+article{
+    background: var(--secondary);
+    border: 2px solid var(--primary);
+    border-radius: .5rem .5rem 0 0;
+    width: 100%;
+    height: 40vh;
+	padding: 1.5rem;
+	color: var(--primary);
+}
+
+article p {
+	font-size: 1rem;
+	margin-top: .8rem;
+}
+
+.highlight{
+    color: var(--highlight2);
+}
+
+.wrapper-button {
+	margin: 0 auto;
+}
+
+.button {
+  font-size: 1.5rem;
+}
+
+/* ANIMATION */
+@keyframes entrance{
+    from{
+        opacity: 0;
+        filter: blur(1rem);
+    }
+    to{
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 900px) {
+	section{
+		justify-content: center;
+		padding-top: 5rem;		
+	}
+
+	article {
+		height: 55vh;
+	}
+
+	article p {
+		font-size: 1.5rem;
+	}
+}
+
+@media (min-width: 600px) {
+	section{
+		justify-content: center;
+		padding-top: 1rem;		
+	}
+
+	article {
+		height: 55vh;
+	}
+
+	article p {
+		font-size: 1.2rem;
+	}
+}
